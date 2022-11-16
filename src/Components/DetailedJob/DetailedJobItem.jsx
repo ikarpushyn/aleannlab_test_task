@@ -14,6 +14,7 @@ import share from '../../images/share.svg';
 
 export const DetailedJobItem = (props) => {
 	const {
+		id,
 		name,
 		email,
 		phone,
@@ -122,7 +123,7 @@ export const DetailedJobItem = (props) => {
 			</div>
 
 			<div className=" mt-[89px] hidden lg:block">
-				<Link to={`/jobs`}>
+				<Link to={`/`}>
 					<ButtonReturn />
 				</Link>
 			</div>

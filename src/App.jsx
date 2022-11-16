@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { BrowserRouter as Router, Navigate, Route, Routes } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
 import { NotFound } from './pages/NotFound';
 
 import { getJobList } from './Api/api';
@@ -26,18 +26,16 @@ function App() {
 
 	return (
 		<>
-			<Router basename="/aleannlab_test_task">
-				{loading ? (
-					<Routes>
-						<Route path="/" element={<Navigate to="jobs" />} />
-						<Route path="/jobs" element={<JobList list={list} />} />
-						<Route path="/DetailedJob/:id" element={<DetailedJob list={list} />} />
-						<Route path="*" element={<NotFound />} />
-					</Routes>
-				) : (
-					<Preloader />
-				)}
-			</Router>
+			{loading ? (
+				<Routes>
+					<Route exact path="/" element={<JobList list={list} />} />
+					<Route exact path="/jobs" element={<JobList list={list} />} />
+					<Route path="/DetailedJob/:id" element={<DetailedJob list={list} />} />
+					<Route path="*" element={<NotFound />} />
+				</Routes>
+			) : (
+				<Preloader />
+			)}
 		</>
 	);
 }
