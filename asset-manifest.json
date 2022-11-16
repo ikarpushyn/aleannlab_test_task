@@ -1,21 +1,21 @@
 {
   "files": {
     "main.css": "/aleannlab_test_task/static/css/main.5b781a26.css",
-    "main.js": "/aleannlab_test_task/static/js/main.2af6ab1d.js",
+    "main.js": "/aleannlab_test_task/static/js/main.5cf4e067.js",
+    "index.html": "/aleannlab_test_task/index.html",
     "static/media/bookmark-star.svg": "/aleannlab_test_task/static/media/bookmark-star.78ba62d5fb7b5fc837743bd155bea830.svg",
     "static/media/right-arrow.svg": "/aleannlab_test_task/static/media/right-arrow.c69dedf11549dba56943e3e043d213b0.svg",
     "static/media/left-arrow.svg": "/aleannlab_test_task/static/media/left-arrow.f2ae26a788dfde421a7015b956fe9cfb.svg",
-    "index.html": "/aleannlab_test_task/index.html",
     "static/media/share.svg": "/aleannlab_test_task/static/media/share.7381a5999554764f3ce8249d49192539.svg",
     "static/media/left-arrow-button.svg": "/aleannlab_test_task/static/media/left-arrow-button.e3f3af7964e1cabfb20bfd4d9d96ee9d.svg",
     "static/media/bookmark.svg": "/aleannlab_test_task/static/media/bookmark.01e2bf00ec9ea9abe7f84a0fe9077b1d.svg",
     "static/media/locationIco.svg": "/aleannlab_test_task/static/media/locationIco.1c093ca173a538132f1ce31ab6296061.svg",
     "static/media/circle.svg": "/aleannlab_test_task/static/media/circle.9c9206dd3c1c0d802c1f617ff249c37c.svg",
     "main.5b781a26.css.map": "/aleannlab_test_task/static/css/main.5b781a26.css.map",
-    "main.2af6ab1d.js.map": "/aleannlab_test_task/static/js/main.2af6ab1d.js.map"
+    "main.5cf4e067.js.map": "/aleannlab_test_task/static/js/main.5cf4e067.js.map"
   },
   "entrypoints": [
     "static/css/main.5b781a26.css",
-    "static/js/main.2af6ab1d.js"
+    "static/js/main.5cf4e067.js"
   ]
 }
