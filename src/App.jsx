@@ -5,7 +5,7 @@ import { NotFound } from './pages/NotFound';
 import { getJobList } from './Api/api';
 import { JobList } from './Components/JobList/JobList';
 import { DetailedJob } from './Components/DetailedJob/DetailedJob';
-import { arrOfData } from './mok/zapaska';
+import { arrOfData } from './mok/zapaska'; //MOK DATA
 import { Preloader } from './pages/Preloader';
 
 function App() {
@@ -27,7 +27,7 @@ function App() {
 	return (
 		<>
 			{loading ? (
-				<Router basename="">
+				<Router basename="/aleannlab_test_task">
 					<Routes>
 						<Route path="/" element={<Navigate to="jobs" />} />
 						<Route path="/jobs" element={<JobList list={list} />} />
