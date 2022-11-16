@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { BrowserRouter as Router, Navigate, Route, Routes } from 'react-router-dom';
 import { NotFound } from './pages/NotFound';
 
 import { getJobList } from './Api/api';
@@ -29,7 +29,7 @@ function App() {
 			<Router basename="/aleannlab_test_task">
 				{loading ? (
 					<Routes>
-						{/* <Route path="/" element={<Navigate to="jobs" />} /> */}
+						<Route path="/" element={<Navigate to="jobs" />} />
 						<Route path="/jobs" element={<JobList list={list} />} />
 						<Route path="/DetailedJob/:id" element={<DetailedJob list={list} />} />
 						<Route path="*" element={<NotFound />} />
