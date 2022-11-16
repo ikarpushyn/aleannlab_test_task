@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom';
 import moment from 'moment/moment';
 
 import '../../index.css';
-/*  my-2  mx-auto ml-auto max-w-screen-2xl overflow-hidden rounded-xl bg-cardBg shadow-sm  sm:mt-2 sm:bg-white */
+
 const StyledRating = styled(Rating)({
 	'& .MuiRating-iconFilled': {
 		color: '#384564',
