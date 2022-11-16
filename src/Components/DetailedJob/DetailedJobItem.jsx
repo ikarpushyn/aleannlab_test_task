@@ -29,7 +29,6 @@ export const DetailedJobItem = (props) => {
 		description,
 		employment_type,
 	} = props;
-
 	let posted = moment(updatedAt, 'YYYYMMDD').fromNow();
 
 	return (

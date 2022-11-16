@@ -21,7 +21,7 @@ export const JobItem = (props) => {
 	let { id, title, pictures, name, address, location, updatedAt } = props;
 	const [value, setValue] = useState();
 
-	const dynamicPicture = `${pictures[0]}?random=${Math.floor(Math.random() * (100 - 1 + 1)) + 1}`;
+	const dynamicPicture = pictures.map((item) => item + `?random=${id}`);
 
 	let posted = moment(updatedAt, 'YYYYMMDD').fromNow();
 

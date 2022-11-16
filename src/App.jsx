@@ -27,9 +27,9 @@ function App() {
 	return (
 		<>
 			{loading ? (
-				<Routes>
+				<Routes >
 					<Route exact path="/" element={<JobList list={list} />} />
-					<Route exact path="/jobs" element={<JobList list={list} />} />
+					<Route path="/jobs" element={<JobList list={list} />} />
 					<Route path="/DetailedJob/:id" element={<DetailedJob list={list} />} />
 					<Route path="*" element={<NotFound />} />
 				</Routes>
