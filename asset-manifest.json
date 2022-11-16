@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/aleannlab_test_task/static/css/main.8fd14814.css",
-    "main.js": "/aleannlab_test_task/static/js/main.33c727eb.js",
+    "main.css": "/aleannlab_test_task/static/css/main.5b781a26.css",
+    "main.js": "/aleannlab_test_task/static/js/main.906b1290.js",
     "static/media/bookmark-star.svg": "/aleannlab_test_task/static/media/bookmark-star.78ba62d5fb7b5fc837743bd155bea830.svg",
     "static/media/right-arrow.svg": "/aleannlab_test_task/static/media/right-arrow.c69dedf11549dba56943e3e043d213b0.svg",
     "static/media/left-arrow.svg": "/aleannlab_test_task/static/media/left-arrow.f2ae26a788dfde421a7015b956fe9cfb.svg",
@@ -11,11 +11,11 @@
     "static/media/bookmark.svg": "/aleannlab_test_task/static/media/bookmark.01e2bf00ec9ea9abe7f84a0fe9077b1d.svg",
     "static/media/locationIco.svg": "/aleannlab_test_task/static/media/locationIco.1c093ca173a538132f1ce31ab6296061.svg",
     "static/media/circle.svg": "/aleannlab_test_task/static/media/circle.9c9206dd3c1c0d802c1f617ff249c37c.svg",
-    "main.8fd14814.css.map": "/aleannlab_test_task/static/css/main.8fd14814.css.map",
-    "main.33c727eb.js.map": "/aleannlab_test_task/static/js/main.33c727eb.js.map"
+    "main.5b781a26.css.map": "/aleannlab_test_task/static/css/main.5b781a26.css.map",
+    "main.906b1290.js.map": "/aleannlab_test_task/static/js/main.906b1290.js.map"
   },
   "entrypoints": [
-    "static/css/main.8fd14814.css",
-    "static/js/main.33c727eb.js"
+    "static/css/main.5b781a26.css",
+    "static/js/main.906b1290.js"
   ]
 }
