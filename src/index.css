@@ -1,13 +1,115 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url(http://fonts.cdnfonts.com/css/proxima-nova-2);
+@import url(https://fonts.googleapis.com/css2?family=Roboto&display=swap);
+* {
+	margin: 0;
+	padding: 0;
+	font-family: 'Proxima Nova', sans-serif;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* job_item */
+@layer components {
+	.container_job_item {
+		@apply my-2  mx-auto ml-auto max-w-screen-2xl overflow-hidden rounded-xl bg-cardBg shadow-sm  sm:mt-2 sm:bg-white;
+	}
+	.container_job_image {
+		@apply ml-2 mt-12 max-h-[66px] min-h-[66px] min-w-[66px] max-w-[66px] justify-center overflow-hidden rounded-full  sm:mt-8  sm:max-h-[85px] sm:min-h-[85px] sm:min-w-[85px] sm:max-w-[85px];
+	}
+	.container_star_rating {
+		@apply mt-4 ml-7 w-2/3 items-center;
+	}
+	.container_star_rating_mobile {
+		@apply ml-auto flex items-center justify-end max-sm:hidden;
+	}
+	.job_title {
+		@apply mt-1 ml-auto text-lg font-bold leading-tight;
+	}
+	.separator {
+		@apply mb-4 h-[2px] bg-mainText opacity-[0.13];
+	}
+	.description {
+		@apply whitespace-pre-line;
+	}
+	.description h3 {
+		@apply mt-8 mb-4 font-bold;
+	}
+	.description ul {
+		@apply list-inside list-square;
+	}
+	.description li::marker {
+		@apply text-[rgba(0,0,0,0.632594)];
+	}
+}
+/* pagination */
+@layer components {
+	.pagination_container {
+		@apply mx-auto mt-[26px] flex h-[40px] w-full justify-between rounded-lg bg-white px-[18px]
+        sm:mt-[49px] sm:h-[52px] sm:max-w-[515px] sm:px-[23px];
+	}
+	
+	.pagination_arrow {
+		@apply h-[31.2px] w-[1.3px] border-solid bg-[#DEE3EF];
+	}
+
+}
+/* contacts*/
+@layer components {
+	.container_contacts {
+		@apply mt-16 flex w-full max-w-[723px] flex-col justify-center
+        lg:mt-0 lg:ml-[133px] lg:w-[402px] lg:min-w-[372px] lg:self-start;
+	}
+	.map_contacts {
+		@apply relative  mt-[21px] h-[436px] w-full
+		max-w-[402px] self-center rounded-lg bg-slate-400
+		lg:mx-0 lg:mt-0 lg:mr-0;
+	}
+	.contacts_detail {
+		@apply relative flex min-h-[218px] items-center justify-center overflow-hidden rounded-t-lg bg-[#2A3047] lg:h-[218px];
+	}
+	.map {
+		@apply h-[218px] w-full rounded-b-lg contrast-[80%] grayscale-[100%] invert-[100%]
+		lg:max-w-[402px];
+	}
+}
+/* detailed_job */
+@layer components {
+	.container_detailed_job {
+		@apply mx-auto max-w-screen-2xl bg-white px-4 pb-[37px] pt-6
+        lg:px-[20px] lg:pb-[162px] lg:pt-14;
+	}
+	.container_detailed_job_left_side {
+		@apply my-14 mx-4 mt-16 flex-col justify-center text-left
+		lg:mt-0 lg:ml-[133px] lg:w-[500px] lg:min-w-[372px] lg:self-start;
+	}
+	.container_images_module {
+		@apply mt-[21px] flex flex-nowrap gap-[10px] overflow-hidden overflow-x-scroll lg:overflow-visible;
+	}
+	.employment_type {
+		@apply min-h-[50px] min-w-[120px] rounded-lg border-2 border-indigo-300 bg-bgEmpolyType pt-3 text-center font-bold text-[#55699E]  lg:w-[222px];
+	}
+	.benefits {
+		@apply min-h-[50px] min-w-[120px] rounded-lg border-2 border-yellow-900 border-opacity-5 bg-bgBenefitsType pt-3 text-center font-bold text-[#988B49] lg:w-[222px];
+	}
+}
+/* button */
+@layer components {
+	.button_apply {
+		@apply mt-4 mb-0 rounded 
+		bg-primary px-6 py-3 text-sm  uppercase text-white shadow outline-none transition-all duration-150 ease-linear hover:shadow-lg focus:outline-none active:bg-pink-600 sm:mb-8 sm:mt-10;
+	}
+	.button_return {
+		@apply mt-4  mb-0 ml-[5%] flex w-auto items-center rounded bg-cardBg px-6  py-3 text-sm uppercase text-primary shadow outline-none transition-all duration-150 ease-linear hover:shadow-lg focus:outline-none active:bg-pink-600 sm:mt-10 sm:mb-8;
+	}
+}
+
+body {
+	font-family: -apple-system, BlinkMacSystemFont, 'Noto Sans', 'Roboto', 'Oxygen', 'Ubuntu',
+		'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	color: #3a4562;
+	background: #e6e9f2;
 }
