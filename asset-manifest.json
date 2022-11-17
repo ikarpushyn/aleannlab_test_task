@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/aleannlab_test_task/static/css/main.5b781a26.css",
-    "main.js": "/aleannlab_test_task/static/js/main.5cf4e067.js",
+    "main.js": "/aleannlab_test_task/static/js/main.38e9597e.js",
     "index.html": "/aleannlab_test_task/index.html",
     "static/media/bookmark-star.svg": "/aleannlab_test_task/static/media/bookmark-star.78ba62d5fb7b5fc837743bd155bea830.svg",
     "static/media/right-arrow.svg": "/aleannlab_test_task/static/media/right-arrow.c69dedf11549dba56943e3e043d213b0.svg",
@@ -12,10 +12,10 @@
     "static/media/locationIco.svg": "/aleannlab_test_task/static/media/locationIco.1c093ca173a538132f1ce31ab6296061.svg",
     "static/media/circle.svg": "/aleannlab_test_task/static/media/circle.9c9206dd3c1c0d802c1f617ff249c37c.svg",
     "main.5b781a26.css.map": "/aleannlab_test_task/static/css/main.5b781a26.css.map",
-    "main.5cf4e067.js.map": "/aleannlab_test_task/static/js/main.5cf4e067.js.map"
+    "main.38e9597e.js.map": "/aleannlab_test_task/static/js/main.38e9597e.js.map"
   },
   "entrypoints": [
     "static/css/main.5b781a26.css",
-    "static/js/main.5cf4e067.js"
+    "static/js/main.38e9597e.js"
   ]
 }
