@@ -1,3 +1,10 @@
+This project is made - a test task, implemented by figma layout : 
+ 
+https://www.figma.com/file/ArCpYEq49mxIA5aOyRDYIa/Test-Task-FE-ALLab?node-id=0%3A1&t=rqDy0c3N7W80hACQ-0
+
+//
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
