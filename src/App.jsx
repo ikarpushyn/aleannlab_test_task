@@ -9,8 +9,8 @@ import { arrOfData } from './mok/zapaska'; //MOK DATA
 import { Preloader } from './pages/Preloader';
 
 function App() {
-	const [list, setList] = useState([]);
-	const [loading, setLoading] = useState(true); // CHANGE WHEN API BACK TO LIFE
+	const [list, setList] = useState([]); // CHANGE WHEN API BACK TO LIFE
+	const [loading, setLoading] = useState(false);
 
 	useEffect(() => {
 		getJobList()
@@ -27,7 +27,7 @@ function App() {
 	return (
 		<>
 			{loading ? (
-				<Routes >
+				<Routes>
 					<Route exact path="/" element={<JobList list={list} />} />
 					<Route path="/jobs" element={<JobList list={list} />} />
 					<Route path="/DetailedJob/:id" element={<DetailedJob list={list} />} />
