@@ -5,12 +5,13 @@ import { NotFound } from './pages/NotFound';
 import { getJobList } from './Api/api';
 import { JobList } from './Components/JobList/JobList';
 import { DetailedJob } from './Components/DetailedJob/DetailedJob';
-import { arrOfData } from './mok/zapaska'; //MOK DATA
+// import { arrOfData } from './mok/zapaska'; //MOK DATA
 import { Preloader } from './pages/Preloader';
+import { IJobDetail } from './types/types';
 
 function App() {
-	const [list, setList] = useState([]); // CHANGE WHEN API BACK TO LIFE
-	const [loading, setLoading] = useState(false);
+	const [list, setList] = useState<IJobDetail[]>([]); // CHANGE WHEN API BACK TO LIFE
+	const [loading, setLoading] = useState<boolean>(false);
 
 	useEffect(() => {
 		getJobList()
@@ -28,7 +29,7 @@ function App() {
 		<>
 			{loading ? (
 				<Routes>
-					<Route exact path="/" element={<JobList list={list} />} />
+					<Route path="/" element={<JobList list={list} />} />
 					<Route path="/jobs" element={<JobList list={list} />} />
 					<Route path="/DetailedJob/:id" element={<DetailedJob list={list} />} />
 					<Route path="*" element={<NotFound />} />

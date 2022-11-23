@@ -1,8 +1,17 @@
-import React from 'react';
+import React, { FC } from 'react';
 import Circle from '../../images/circle.svg';
 import locationIco from '../../images/locationIco.svg';
+import { IJobDetail } from '../../types/types';
 
-export const Contacts = ({ name, address, phone, email, location }) => {
+interface MapProps {
+	address: IJobDetail['address'];
+	phone: IJobDetail['phone'];
+	email: IJobDetail['email'];
+	location: IJobDetail['location'];
+	name: IJobDetail['name'];
+}
+
+export const Contacts: FC<MapProps> = ({ name, address, phone, email, location }) => {
 	return (
 		<div className="container_contacts ">
 			<div className="lg:hidden">

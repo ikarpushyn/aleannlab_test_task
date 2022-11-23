@@ -1,5 +1,5 @@
 import React from 'react';
-const NotFound = () => {
+const NotFound = (): JSX.Element => {
 	return (
 		<div>
 			<div className="flex h-[100vh] items-center justify-center">

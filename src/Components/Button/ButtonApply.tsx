@@ -1,6 +1,6 @@
 import React from 'react';
 
-export const ButtonApply = () => {
+export const ButtonApply = (): JSX.Element => {
 	return (
 		<>
 			<button className="button_apply" type="button">

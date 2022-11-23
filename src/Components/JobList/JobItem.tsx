@@ -1,10 +1,11 @@
-import React, { useState } from 'react';
+import React, { useState, FC } from 'react';
 import locationIco from './../../images/locationIco.svg';
 import bookmark from './../../images/bookmark.svg';
 import { Rating } from '@mui/material';
 import { styled } from '@mui/material/styles';
 import { Link } from 'react-router-dom';
 import moment from 'moment/moment';
+import { JobItemProps } from '../../types/types';
 
 import '../../index.css';
 
@@ -17,11 +18,10 @@ const StyledRating = styled(Rating)({
 	},
 });
 
-export const JobItem = (props) => {
-	let { id, title, pictures, name, address, location, updatedAt } = props;
-	const [value, setValue] = useState();
+export const JobItem: FC<JobItemProps> = ({ id, title, pictures, name, address, updatedAt }) => {
+	const [value, setValue] = useState<number | null>();
 
-	const dynamicPicture = pictures.map((item) => item + `?random=${id}`);
+	const dynamicPicture: any = pictures.map((item) => item + `?random=${id}`);
 
 	let posted = moment(updatedAt, 'YYYYMMDD').fromNow();
 
@@ -35,7 +35,7 @@ export const JobItem = (props) => {
 						</div>
 					</Link>
 
-					<div to={`/DetailedJob/${id}`} className="container_star_rating">
+					<div className="container_star_rating">
 						<div className="sm:hidden">
 							<div className="mr-14 flex">
 								<div>
@@ -43,13 +43,13 @@ export const JobItem = (props) => {
 										name="simple-controlled"
 										size="small"
 										value={value}
-										onChange={(event, newValue) => {
+										onChange={(event, newValue: number | null) => {
 											setValue(newValue);
 										}}
 									/>
 								</div>
 
-								<nobr className="ml-auto  font-light text-greyText">Posted {posted}</nobr>
+								<p className="ml-auto  font-light text-greyText">Posted {posted}</p>
 							</div>
 						</div>
 						<Link to={`/DetailedJob/${id}`}>
@@ -58,7 +58,7 @@ export const JobItem = (props) => {
 
 						<Link to={`/DetailedJob/${id}`} className="text-greyText">
 							<h2 className="mt-2 pb-2">Department name • {name}</h2>
-							<span href="/" className="flex pb-2">
+							<span className="flex pb-2">
 								<span>
 									<img src={locationIco} alt="" className="mr-2" />
 								</span>
@@ -80,7 +80,7 @@ export const JobItem = (props) => {
 						</div>
 					</div>
 					<div className=" ml-auto flex flex-nowrap justify-end  max-sm:hidden ">
-						<nobr className="mt-28 font-light text-greyText">Posted {posted} </nobr>
+						<span className="mt-28 font-light text-greyText">Posted {posted} </span>
 					</div>
 					<i className="m-4 max-sm:hidden">
 						<img src={bookmark} alt="" />

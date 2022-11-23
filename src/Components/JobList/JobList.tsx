@@ -1,10 +1,11 @@
 import usePagination from '../../hook/usePagination';
-
-import { JobItem } from '../JobList/JobItem';
+import React, { FC } from 'react';
 import { Preloader } from '../../pages/Preloader';
 import { Pagination } from './Pagination';
+import { JobItem } from './JobItem';
+import { JobListProps } from '../../types/types';
 
-export const JobList = ({ list }) => {
+export const JobList: FC<JobListProps> = ({ list }) => {
 	const {
 		firstContentIndex,
 		lastContentIndex,
@@ -26,7 +27,17 @@ export const JobList = ({ list }) => {
 			) : (
 				list
 					.slice(firstContentIndex, lastContentIndex)
-					.map((item) => <JobItem key={item.id} {...item} />)
+					.map((item) => (
+						<JobItem
+							key={item.id}
+							id={item.id}
+							pictures={item.pictures}
+							title={item.title}
+							name={item.name}
+							address={item.address}
+							updatedAt={item.updatedAt}
+						/>
+					))
 			)}
 			<Pagination
 				nextPage={nextPage}

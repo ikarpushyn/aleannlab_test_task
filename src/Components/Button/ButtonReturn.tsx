@@ -1,7 +1,7 @@
 import React from 'react';
 import ArrowButton from './../../images/left-arrow-button.svg';
 
-export const ButtonReturn = () => {
+export const ButtonReturn = (): JSX.Element => {
 	return (
 		<>
 			<button className="button_return" type="button">

@@ -1,5 +1,5 @@
 /* eslint-disable jsx-a11y/iframe-has-title */
-import React from 'react';
+import React, { FC } from 'react';
 import moment from 'moment';
 import Image from '../ImagesModule/Image';
 import { Description } from '../../util/Description';
@@ -11,10 +11,10 @@ import { ButtonReturn } from '../Button/ButtonReturn';
 import bookmarkStar from '../../images/bookmark-star.svg';
 import bookmark from '../../images/bookmark.svg';
 import share from '../../images/share.svg';
+import { JobDetailProps } from '../../types/types';
 
-export const DetailedJobItem = (props) => {
+export const DetailedJobItem: FC<JobDetailProps> = (props) => {
 	const {
-		id,
 		name,
 		email,
 		phone,
@@ -24,7 +24,6 @@ export const DetailedJobItem = (props) => {
 		benefits,
 		location,
 		pictures,
-		createdAt,
 		updatedAt,
 		description,
 		employment_type,
@@ -36,7 +35,7 @@ export const DetailedJobItem = (props) => {
 			<div className="container_detailed_job_left_side">
 				<div className="lg:flex">
 					<div className="lg:flex">
-						<nobr className="my-4 text-2xl font-bold lg:mr-[25%]">Job Details</nobr>
+						<p className="my-4 text-2xl font-bold lg:mr-[25%]">Job Details</p>
 						<hr className="separator" />
 					</div>
 
@@ -104,7 +103,7 @@ export const DetailedJobItem = (props) => {
 							<span>Employment type</span>
 							<div className="mt-2 flex justify-start space-x-4">
 								{employment_type.map((item) => (
-									<div class="employment_type">{item}</div>
+									<div className="employment_type">{item}</div>
 								))}
 							</div>
 						</div>
@@ -113,7 +112,7 @@ export const DetailedJobItem = (props) => {
 							<span>Benefits</span>
 							<div className=" mt-2 flex justify-start space-x-4">
 								{benefits.map((item) => (
-									<div class="benefits">{item}</div>
+									<div className="benefits">{item}</div>
 								))}
 							</div>
 						</div>
