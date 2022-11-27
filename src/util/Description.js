@@ -16,6 +16,7 @@ export const Description = (description) => {
       <ul>
   
       ${descriptionArr
+				// eslint-disable-next-line array-callback-return
 				.map((item) => {
 					if (item) {
 						return `<li>${item}</li>`;

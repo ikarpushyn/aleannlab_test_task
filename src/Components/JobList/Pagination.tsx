@@ -3,7 +3,16 @@ import React from 'react';
 import leftArrow from '../../images/left-arrow.svg';
 import rightArrow from '../../images/right-arrow.svg';
 
-export const Pagination = ({ nextPage, prevPage, page, gaps, setPage, totalPages }) => {
+import { IPaginationReturn } from '../../hook/usePagination';
+
+export const Pagination = ({
+	nextPage,
+	prevPage,
+	page,
+	gaps,
+	setPage,
+	totalPages,
+}: IPaginationReturn): JSX.Element => {
 	return (
 		<div>
 			<div className="pagination_container">
